@@ -1,5 +1,5 @@
-calculate :: String -> [Int]
-calculate = foldl calcop [] . words
+calculate :: String -> Int
+calculate = head . foldl calcop [] . words
 
 calcop :: [Int] ->  String -> [Int]
 calcop (x:y:ys) "+" = (x + y):ys
